@@ -1,4 +1,3 @@
-//#hola
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { toBase64 } from '../utilidades';
 
