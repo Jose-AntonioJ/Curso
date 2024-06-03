@@ -14,9 +14,9 @@
     </mat-form-field>
 
     <app-input-img [urlImageActual]="modelo?.foto" (archivoSeleccionado)="archivoSeleccionado($event)"></app-input-img>
-    
 
-    <app-input-markdown></app-input-markdown>
+
+    <app-input-markdown (changeMarkdown)="cambioMarkdown($event)"></app-input-markdown>
 
     <div>
         <button mat-flat-button color="primary" [disabled]="form.invalid">

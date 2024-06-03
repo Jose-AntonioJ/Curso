@@ -2,7 +2,7 @@
     <mat-tab label="Eitar">
         <mat-form-field appearance="fill">
             <mat-label>Biografia</mat-label>
-            <textarea (input)="inputTextArea($event.target.value)" matInput ></textarea>
+            <textarea #textareaRef (input)="inputTextArea(textareaRef.value)" matInput ></textarea>
         </mat-form-field>
     </mat-tab>
     <mat-tab label="Preview">

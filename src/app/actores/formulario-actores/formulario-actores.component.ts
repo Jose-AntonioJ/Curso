@@ -5,12 +5,10 @@ import { actorCreacionDTO, actorDTO } from '../actor';
 @Component({
   selector: 'app-formulario-actores',
   templateUrl: './formulario-actores.component.html',
-  styleUrl: './formulario-actores.component.css'
+  styleUrl: './formulario-actores.component.css',
 })
-export class FormularioActoresComponent implements OnInit{
-
-
-  constructor(private formBuilder: FormBuilder) { }
+export class FormularioActoresComponent implements OnInit {
+  constructor(private formBuilder: FormBuilder) {}
 
   form!: FormGroup;
 
@@ -29,20 +27,24 @@ export class FormularioActoresComponent implements OnInit{
         },
       ],
       fechaNacimiento: '',
-      foto: ''
-
+      foto: '',
+      biografia: ''
     });
 
-    if(this.modelo !== undefined){
-      this.form.patchValue(this.modelo)
+    if (this.modelo !== undefined) {
+      this.form.patchValue(this.modelo);
     }
   }
 
-  archivoSeleccionado(file: any){
-    this.form.get('foto')?.setValue
+  archivoSeleccionado(file: any) {
+    this.form.get('foto')?.setValue;
   }
 
-  onSubmit(){
-    this.submit.emit(this.form.value)
+  cambioMarkdown(texto: string){
+    this.form.get('biografia')?.setValue(texto);
+  }
+
+  onSubmit() {
+    this.submit.emit(this.form.value);
   }
 }
