@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { ListadoPeliculasComponent } from './peliculas/listado-peliculas/listado-peliculas.component';
 import { ListadoGenericoComponent } from './utilidades/listado-generico/listado-generico.component';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { ReactiveFormsModule } from '@angular/forms'
-import{ MarkdownModule} from 'ngx-markdown'
-import { LeafletModule } from '@asymmetrik/ngx-leaflet'
+import { ReactiveFormsModule } from '@angular/forms';
+import{ MarkdownModule} from 'ngx-markdown';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import "leaflet/dist/images/marker-shadow.png";
 
 import {MaterialModule} from './material/material.module';
 import { MenuComponent } from './menu/menu.component';

@@ -20,6 +20,8 @@ export class FormularioCineComponent implements OnInit{
   @Output()
   guardarCambios: EventEmitter<cineCreacionDTO> = new EventEmitter<cineCreacionDTO>();
 
+  cordenadaInicial: Coordenada [] = [];
+
   ngOnInit(): void {
     this.form = this.formBuilder.group({
       nombre: [
@@ -44,12 +46,14 @@ export class FormularioCineComponent implements OnInit{
 
     if(this.modelo !== undefined){
       this.form.patchValue(this.modelo);
+      this.cordenadaInicial.push({latitud:this.modelo.latitud, longitud:this.modelo.longitud});
     }
   }
 
   cordenadaSeleccionada(coordenada: Coordenada){
     this.form.patchValue(coordenada);
   }
+  
 
   Onsubmit(){
     this.guardarCambios.emit(this.form.value);
